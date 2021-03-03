@@ -7,4 +7,4 @@ $ pip install pygame <br>
 
 <h3>Output</h3>
 This is the starting Screen
-<a href = "https://github.com/ankita2002/Python-Music_Player/blob/main/Mini%20Music%20Player%2003-03-2021%2019_59_55.png"></a>
+<a href = "https://github.com/ankita2002/Python-Music_Player/blob/main/Mini%20Music%20Player%2003-03-2021%2019_59_55.png?raw=true"></a>
