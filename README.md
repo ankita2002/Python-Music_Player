@@ -24,5 +24,5 @@ Similar to play you have the other buttons which would help you to control bette
 <ol>Pause - To pause the song at that moment</ol> 
 <ol>Unpause - To Play song from the point it was pause </ol> 
 <ol>Open - To Open file Location</ol> 
-<ol>Volume Scroll - To adjut Volume</ol> 
+<ol>Volume Scroll - To adjust Volume</ol> 
 
