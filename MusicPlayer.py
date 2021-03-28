@@ -22,7 +22,7 @@ def open_folder():
 
 root = Tk()
 mixer.init()
-root.geometry("300x300")
+root.geometry("450x300")
 root.title("Mini Music Player")
 root.configure(bg='Red')
 
@@ -45,15 +45,15 @@ ttk.Button(root,text="UnPause",width=10,image=icon_unpause,command=mixer.music.u
 ttk.Button(root,text="Open",width=10,image=icon_open,command=open_folder).place(x=10,y=170)
 
 music_frame = Frame(root,bd=2,relief=RIDGE)
-music_frame.place(x=90,y=10,width=200,height=110)
+music_frame.place(x=120,y=10,width=300,height=110)
 scroll_y=ttk.Scrollbar(music_frame)
-play_list = Listbox(music_frame,width=29,yscrollcommand=scroll_y.set)
+play_list = Listbox(music_frame,width=200,yscrollcommand=scroll_y.set)
 scroll_y.config(command=play_list.yview)
 scroll_y.pack(side=RIGHT,fill=Y)
 play_list.pack(side=LEFT,fill=BOTH)
 
 vol=ttk.Scale(root,from_=0, to_=100,length=180,command=vol_set)
 vol.set(50)
-vol.place(x=100,y=130)
+vol.place(x=120,y=130)
 
 root.mainloop()
