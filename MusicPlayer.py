@@ -65,7 +65,7 @@ ttk.Button(root, text="UnPause", width=10, image=icon_unpause,
            command=mixer.music.unpause).place(x=10, y=130)
 ttk.Button(root, text="Open", width=10, image=icon_open,
            command=open_folder).place(x=10, y=170)
-ttk.Button(root, image=icon_volumedown, command=decrease).place(x=130, y=126)
+ttk.Button(root, image=icon_volumedown, command=decrease).place(x=125, y=126)
 ttk.Button(root, image=icon_volumeup, command=increase).place(x=355, y=126)
 
 
