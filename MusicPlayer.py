@@ -44,7 +44,6 @@ root = Tk()
 mixer.init()
 root.geometry("450x300")
 root.title("Mini Music Player")
-root.configure(bg='Red')
 
 icon_play = PhotoImage(file="assets/icons/play.png")
 icon_pause = PhotoImage(file="assets/icons/pause.png")
