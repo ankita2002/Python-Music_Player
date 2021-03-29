@@ -27,13 +27,15 @@ def open_folder():
 
 def decrease():
     global volume_value
-    volume_value -= 10
+    if volume_value > 0:
+        volume_value -= 10
     vol.set(volume_value)
 
 
 def increase():
     global volume_value
-    volume_value += 10
+    if volume_value < 100:
+        volume_value += 10
     vol.set(volume_value)
 
 
