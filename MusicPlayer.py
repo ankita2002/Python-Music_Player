@@ -1,5 +1,6 @@
 from tkinter import *
 from tkinter import ttk, filedialog, PhotoImage
+from PIL import ImageTk,Image
 import os
 from pygame import mixer
 
@@ -55,6 +56,13 @@ icon_volumedown = PhotoImage(file="assets/icons/volumedown.png")
 
 s = ttk.Style(root)
 s.theme_use('vista')
+
+canv = Canvas(root, width=700, height=700, bg='white')
+canv.place(relx=0, rely=0, anchor=NW)
+img = Image.open("assets/icons/background.jpg")
+img = img.resize((500, 450), Image.ANTIALIAS)  # PIL solution
+img_save = ImageTk.PhotoImage(img)
+canv.create_image(0, 0, anchor=NW, image=img_save)
 
 # buttons
 ttk.Button(root, text="Play", image=icon_play, width=10,
