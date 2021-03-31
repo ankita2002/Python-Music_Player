@@ -1,22 +1,27 @@
 # Python-Music_Player
 
-<h3> Required Installation </h3>
-$ pip install os <br>
-$ pip install tkinter <br>
-$ pip install pygame <br>
-
+``` bash
+$ pip install os 
+$ pip install tkinter
+$ pip install pygame
+```
 <h3>Output</h3>
-This is the starting Screen
-<img src = "https://raw.githubusercontent.com/ankita2002/Python-Music_Player/main/Mini%20Music%20Player%2003-03-2021%2019_59_55.png">
-from here click on open & it would open file Explorer
-<img src = "https://github.com/ankita2002/Python-Music_Player/blob/main/Mini%20Music%20Player%2003-03-2021%2020_00_38.png">
-Select the folder where all your mp3 files are stored <br>
-It would look similar to this
-<img src = "https://github.com/ankita2002/Python-Music_Player/blob/main/Mini%20Music%20Player%2003-03-2021%2020_01_26.png">
-Select any mp3 song <br>
-Click the "Play" Button and your song would be played
-<img src = "https://github.com/ankita2002/Python-Music_Player/blob/main/Mini%20Music%20Player%2003-03-2021%2020_01_50.png">
-Similar to play you have the other buttons which would help you to control better <br>
+
+#### This is the starting Screen
+<img src = "assets\output\Mini Music Player 03-03-2021 19_59_55.png">
+
+#### from here click on open & it would open file Explorer
+<img src = "assets\output\Mini Music Player 03-03-2021 20_00_38.png">
+
+#### Select the folder where all your mp3 files are stored <br>
+#### It would look similar to this
+<img src = "assets\output\Mini Music Player 03-03-2021 20_01_26.png">
+
+#### Select any mp3 song <br>
+#### Click the "Play" Button and your song would be played
+<img src = "assets\output\Mini Music Player 03-03-2021 20_01_50.png">
+
+#### Similar to play you have the other buttons which would help you to control better <br>
 <h2>Instructions</h2>
 
 <ol>Play - To Play the Selected song</ol> 
