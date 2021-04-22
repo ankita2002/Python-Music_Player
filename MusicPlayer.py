@@ -1,6 +1,6 @@
 from tkinter import *
 from tkinter import ttk, filedialog, PhotoImage
-from PIL import ImageTk,Image
+from PIL import ImageTk, Image
 import os
 from pygame import mixer
 
@@ -42,7 +42,7 @@ def increase():
 
 root = Tk()
 mixer.init()
-root.geometry("450x300")
+root.geometry("550x600")
 root.title("Mini Music Player")
 
 icon_play = PhotoImage(file="assets/icons/play.png")
@@ -59,11 +59,11 @@ s.theme_use('vista')
 canv = Canvas(root, width=700, height=700, bg='white')
 canv.place(relx=0, rely=0, anchor=NW)
 img = Image.open("assets/icons/background.jpg")
-img = img.resize((500, 450), Image.ANTIALIAS)  # PIL solution
+img = img.resize((550, 600), Image.ANTIALIAS)
 img_save = ImageTk.PhotoImage(img)
 canv.create_image(0, 0, anchor=NW, image=img_save)
 
-# buttons
+
 ttk.Button(root, text="Play", image=icon_play, width=10,
            command=play_song).place(x=10, y=10)
 ttk.Button(root, text="Stop", width=10, image=icon_stop,
@@ -74,20 +74,21 @@ ttk.Button(root, text="UnPause", width=10, image=icon_unpause,
            command=mixer.music.unpause).place(x=10, y=130)
 ttk.Button(root, text="Open", width=10, image=icon_open,
            command=open_folder).place(x=10, y=170)
-ttk.Button(root, image=icon_volumedown, command=decrease).place(x=125, y=126)
-ttk.Button(root, image=icon_volumeup, command=increase).place(x=355, y=126)
+ttk.Button(root, image=icon_volumedown, command=decrease).place(x=125, y=225)
+ttk.Button(root, image=icon_volumeup, command=increase).place(x=355, y=225)
 
+ttk.Label(root,text="MUSIC PLAYER",font=("Arial" ,20)).place(x=170,y=400)
 
-music_frame = Frame(root, bd=2, relief=RIDGE)
-music_frame.place(x=120, y=10, width=300, height=110)
+music_frame = Frame(root)
+music_frame.place(x=120, y=10, width=300, height=200)
 scroll_y = ttk.Scrollbar(music_frame)
-play_list = Listbox(music_frame, width=200, yscrollcommand=scroll_y.set)
+play_list = Listbox(music_frame, width=200,height=200, yscrollcommand=scroll_y.set)
 scroll_y.config(command=play_list.yview)
 scroll_y.pack(side=RIGHT, fill=Y)
 play_list.pack(side=LEFT, fill=BOTH)
 
 vol = ttk.Scale(root, from_=0, to_=100, length=180, command=vol_set)
 vol.set(volume_value)
-vol.place(x=170, y=130)
+vol.place(x=170, y=230)
 
 root.mainloop()
