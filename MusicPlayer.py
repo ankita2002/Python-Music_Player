@@ -64,23 +64,18 @@ img_save = ImageTk.PhotoImage(img)
 canv.create_image(0, 0, anchor=NW, image=img_save)
 
 
-ttk.Button(root, text="Play", image=icon_play, width=10,
-           command=play_song).place(x=10, y=10)
-ttk.Button(root, text="Stop", width=10, image=icon_stop,
-           command=mixer.music.stop).place(x=10, y=50)
-ttk.Button(root, text="Pause", width=10, image=icon_pause,
-           command=mixer.music.pause).place(x=10, y=90)
-ttk.Button(root, text="UnPause", width=10, image=icon_unpause,
-           command=mixer.music.unpause).place(x=10, y=130)
-ttk.Button(root, text="Open", width=10, image=icon_open,
-           command=open_folder).place(x=10, y=170)
-ttk.Button(root, image=icon_volumedown, command=decrease).place(x=125, y=225)
-ttk.Button(root, image=icon_volumeup, command=increase).place(x=355, y=225)
+ttk.Button(root, text="Play", image=icon_play, width=30, command=play_song).place(x=80, y=150)
+ttk.Button(root, text="Stop", width=10, image=icon_stop,command=mixer.music.stop).place(x=80, y=192)
+ttk.Button(root, text="Pause", width=10, image=icon_pause,command=mixer.music.pause).place(x=80, y=234)
+ttk.Button(root, text="UnPause", width=10, image=icon_unpause,command=mixer.music.unpause).place(x=80, y=276)
+ttk.Button(root, text="Open", width=10, image=icon_open,command=open_folder).place(x=80, y=318)
+ttk.Button(root, image=icon_volumedown, command=decrease).place(x=158, y=392)
+ttk.Button(root, image=icon_volumeup, command=increase).place(x=379, y=392)
 
-ttk.Label(root,text="MUSIC PLAYER",font=("Arial" ,20)).place(x=170,y=400)
+ttk.Label(root, text="MUSIC PLAYER", font=("Times" ,30), background= "blue4", foreground = "White").place(x=150,y=40)
 
 music_frame = Frame(root)
-music_frame.place(x=120, y=10, width=300, height=200)
+music_frame.place(x=150, y=150, width=300, height=200)
 scroll_y = ttk.Scrollbar(music_frame)
 play_list = Listbox(music_frame, width=200,height=200, yscrollcommand=scroll_y.set)
 scroll_y.config(command=play_list.yview)
@@ -89,6 +84,6 @@ play_list.pack(side=LEFT, fill=BOTH)
 
 vol = ttk.Scale(root, from_=0, to_=100, length=180, command=vol_set)
 vol.set(volume_value)
-vol.place(x=170, y=230)
+vol.place(x=200, y=400)
 
 root.mainloop()
